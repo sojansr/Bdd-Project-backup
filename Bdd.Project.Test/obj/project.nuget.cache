@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "dgSpecHash": "7PB27x7wOC5xGiP4Rf6eujkdkUaT+na6Q/gZNaVi1WeqiKAlwudqquO6SCZt15Ec5ZA/JoGWYK/GvIKFI9takA==",
+  "success": true,
+  "projectFilePath": "D:\\Repos\\BDD Project\\Bdd.Porject.Test\\Bdd.Project.Test\\Bdd.Project.Test.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ASUS\\.nuget\\packages\\bodi\\1.4.1\\bodi.1.4.1.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\cucumber.messages\\6.0.1\\cucumber.messages.6.0.1.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\fluentassertions\\5.10.3\\fluentassertions.5.10.3.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\gherkin\\6.0.0\\gherkin.6.0.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\google.protobuf\\3.7.0\\google.protobuf.3.7.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\mstest.testadapter\\2.1.0\\mstest.testadapter.2.1.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\mstest.testframework\\2.1.0\\mstest.testframework.2.1.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\selenium.chrome.webdriver\\85.0.0\\selenium.chrome.webdriver.85.0.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\selenium.firefox.webdriver\\0.27.0\\selenium.firefox.webdriver.0.27.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\selenium.webdriver\\4.0.0-alpha07\\selenium.webdriver.4.0.0-alpha07.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\specflow\\3.5.14\\specflow.3.5.14.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\specflow.mstest\\3.5.14\\specflow.mstest.3.5.14.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\specflow.plus.livingdocplugin\\3.5.186\\specflow.plus.livingdocplugin.3.5.186.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\specflow.tools.msbuild.generation\\3.5.14\\specflow.tools.msbuild.generation.3.5.14.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\system.reflection.emit\\4.3.0\\system.reflection.emit.4.3.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\system.threading.tasks.extensions\\4.4.0\\system.threading.tasks.extensions.4.4.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\system.valuetuple\\4.4.0\\system.valuetuple.4.4.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\utf8json\\1.3.7\\utf8json.1.3.7.nupkg.sha512"
+  ],
+  "logs": []
+}
