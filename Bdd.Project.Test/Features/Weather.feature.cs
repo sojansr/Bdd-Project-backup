@@ -92,15 +92,19 @@ namespace Bdd.Project.Test.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Compare the two weather api ouputs")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Weather")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("AssertingTemperatures")]
-        public virtual void CompareTheTwoWeatherApiOuputs()
+        public virtual void CompareTheTwoWeatherApiOuputs(string searchText, string lattitude, string longitude, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
+            string[] @__tags = new string[] {
                     "AssertingTemperatures"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("SearchText", searchText);
+            argumentsOfScenario.Add("Lattitude", lattitude);
+            argumentsOfScenario.Add("Longitude", longitude);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Compare the two weather api ouputs", null, tagsOfScenario, argumentsOfScenario);
 #line 7
 this.ScenarioInitialize(scenarioInfo);
@@ -129,7 +133,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("Find the search box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 10
- testRunner.Then("Enter search box text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("Enter search box text \"{0}\"", searchText), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 11
  testRunner.Then("Find and click the search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -138,13 +142,28 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("Read the result Temperature", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 13
- testRunner.Then("Call the Open weather Api", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("Call the Open weather Api with \"{0}\" and \"{1}\"", lattitude, longitude), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 14
  testRunner.And("Compare the temperatures", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Compare the two weather api ouputs: temperature in trivandrum")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Weather")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("AssertingTemperatures")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "temperature in trivandrum")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:SearchText", "temperature in trivandrum")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Lattitude", "8.5241")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Longitude", "76.9366")]
+        public virtual void CompareTheTwoWeatherApiOuputs_TemperatureInTrivandrum()
+        {
+#line 7
+this.CompareTheTwoWeatherApiOuputs("temperature in trivandrum", "8.5241", "76.9366", ((string[])(null)));
+#line hidden
         }
     }
 }
