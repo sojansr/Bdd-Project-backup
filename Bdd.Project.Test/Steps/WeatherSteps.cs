@@ -1,15 +1,14 @@
 ﻿using System;
 using TechTalk.SpecFlow;
 using System.Configuration;
-using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using Bdd.Project.Test.ApiClients;
-using Bdd.Project.Test.Models;
 using System.Threading;
-using System.Net.Http;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
+using Bdd.Project.Test.Utilities;
+using OpenQA.Selenium.Chrome;
 
 namespace Bdd.Porject.Test.Steps
 {
@@ -24,7 +23,6 @@ namespace Bdd.Porject.Test.Steps
         private IWebElement searchBox { get; set; }
         private IWebElement searchButton { get; set; }
         private ClientInterface client{ get;set;}
-        private WeatherResponseModel weatherResponse { get; set; }
 
         [BeforeFeature]
         public static void Setup()
@@ -33,14 +31,24 @@ namespace Bdd.Porject.Test.Steps
             //SearchString = ConfigurationManager.AppSettings["SearchValue"];
         }
 
-        [Given(@"Call Google home URL")]
-        public void GivenCallGoogleHomeURL()
+
+        [Given(@"Call Google home URL from ""(.*)""")]
+        public void GivenCallGoogleHomeURLFrom(string browser)
         {
-            // Starting the Firefox driver
-            webDriver = new FirefoxDriver();
+            if (browser.ToLower() == "chrome")
+            {
+                ChromeOptions options = new ChromeOptions() { AcceptInsecureCertificates = true };
+                webDriver = new ChromeDriver(options);
+            }
+            else if (browser.ToLower() == "firefox")
+            {
+                FirefoxOptions options = new FirefoxOptions() { AcceptInsecureCertificates = true};
+                webDriver = new FirefoxDriver(options);
+            }
             webDriver.Navigate().GoToUrl(HomeUrl);
             webDriver.Manage().Window.Maximize();
         }
+
 
         [Then(@"Find the search box")]
         public void ThenFindTheSearchBox()
@@ -75,13 +83,6 @@ namespace Bdd.Porject.Test.Steps
             GoogleTemp = int.Parse(webDriver.FindElement(By.Id("wob_tm")).Text);
         }
 
-        //[Then(@"Call the Open weather Api")]
-        //public void ThenCallTheOpenWeatherApi()
-        //{
-        //    client = new ClientInterface();
-        //    var response = client.GetCurrentWeather("8.5241", "76.9366");
-        //    WeatherApiTemp = int.Parse(response.current.temp.ToString());
-        //}
 
         [Then(@"Call the Open weather Api with ""(.*)"" and ""(.*)""")]
         public void ThenCallTheOpenWeatherApiWithAnd(string lat, string  lon)
